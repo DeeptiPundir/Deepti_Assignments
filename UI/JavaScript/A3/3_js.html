@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Rectangle(width,height)
+        {
+            this.height=height;
+            this.width=width;
+        }
+
+        Rectangle.prototype.getArea=function()
+        {
+            return this.width * this.height;
+        }
+
+        var rec = new Rectangle(5,4);
+
+        rec.hieght = 50;
+        
+        document.writeln(rec.height);
+
+        document.writeln(rec.hieght);
+
+
+       var d = "Area :" +  rec.getArea();
+       document.writeln(d);
+
+    </script>
+</body>
+</html>

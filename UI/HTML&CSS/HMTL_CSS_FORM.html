@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            body{
+                background-image: url(background.png);
+                background-position: cover;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-top: 50px;
+            }
+            .regform{
+                width: 700px;
+                background-color:rgb(0,0,0,0.6);
+                margin:auto;
+                color: cornsilk;
+                padding: 4px 0px 4px 0px;
+                text-align: center;
+                border-radius: 15px 15px 0px 0px;
+            }
+
+            .start{
+                width: 900px;
+                background-color: rgb(0,0,0,0.5);
+                margin: auto;
+            }
+
+            form{
+                padding: 20px;
+            }
+            #name{
+                width: 100%;
+                height: 100px;
+            }
+            .name, .address, .Contact, .emailL, .typegrad, .yearL, .question{
+                color: white;
+                margin-left: 10px;
+                margin-top: 30px;
+                width: 200px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .label-1{
+                position: relative;
+                text-transform: capitalize;
+                left: 155px;
+                top: -2px;
+                
+                font-size: 15px;
+                color: whitesmoke;   
+            }
+            .label-2{
+                position: relative;
+                left: 460px;
+                top: -70px;
+                line-height: 40px;
+                padding: 0 20px;
+                border-radius: 6px;
+                font-size: 16px;
+                color: whitesmoke;
+            }
+            .firstname{
+                position: relative;
+                left: 65px;
+                top: -35px;
+                line-height: 45px;
+                padding: 0 20px;
+                border-radius: 6px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+            }
+            .lastname{
+                position: relative;
+                left: 350px;
+                top: -104px;
+                line-height: 45px;
+                padding: 0 20px;
+                border-radius: 6px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+            }
+            .address{
+                position: relative;
+                left: -25px;
+                top: -2px;
+                line-height: 50px;
+                padding: 0 20px;
+                font-size: 16px;
+                color: whitesmoke;
+            }
+            .address-1,.address-2,.address-3{
+                position: relative;
+                left: 150px;
+                top: -65px;
+                line-height: 20px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+            }
+            .code{
+                position: relative;
+                left: 83px;
+                top: -38px;
+                width: 25px;
+                line-height: 28px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+            }
+            .Acode{
+                position: relative;
+                left: 138px;
+                top: -10px;
+                line-height: 20px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: whitesmoke;
+            }
+            .Pnumber{
+                position: relative;
+                left: 88px;
+                top: -10px;
+                line-height: 20px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: whitesmoke;
+            }
+            .number{
+                position: relative;
+                left: -50px;
+                top: -38px;
+                line-height: 28px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+            }
+            .email{
+                position: relative;
+                left: 145px;
+                top: -39px;
+                width: 600px;
+                line-height: 28px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+            }
+  
+            .grad{
+                position: relative;
+                left: 145px;
+                top: -35px;
+                width: 600px;
+                line-height: 28px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+                }
+                .year{
+                    position: relative;
+                left: 180px;
+                top: -32.5px;
+                width: 600px;
+                line-height: 28px;
+                padding: 0 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: black;
+                background-color: rgb(195, 220, 240);
+                }
+        </style>
+    </head>
+    <body>
+        <div class="regform"><h1>Registration Form</h1></div>
+        <div class="start">
+            <form>
+                <div id="name">
+                    <h2 class="name">Name</h2>
+                    <label class="label-1">first name</label>
+                    <input class="firstname" type="text" name="first_name" placeholder="first_name" required>
+                    <br><br>
+                    <label class="label-2">last name</label>
+                    <input class="lastname" type="text" name="last_name" placeholder="last_name" required>   
+                </div>
+                <br><br>
+
+                <label class="address" for="address">Address</label><br><br>
+                <textarea class= "address-1" name="address-1" id="address" col="30" rows="2" placeholder="Address Line 1"></textarea>
+                <textarea class= "address-2" name="address-2" id="address" col="30" rows="2" placeholder="Address Line 2"></textarea>
+                <textarea class= "address-3" name="address-3" id="address" col="30" rows="2" placeholder="Address Line 3"></textarea>
+                
+                <br>
+
+                <h2 class="Contact">Contact</h2>
+                <label class="Acode" for="phone">Code</label>
+                <input class="code" type="text" name="phone" id="phone" placeholder="+91">
+                <label class="Pnumber" for="number">Phone Number</label>
+                <input class="number" type="text" id="number" name="phone_number">
+                <br><br>
+                <h2 class="emailL">Email</h2>
+                <input class="email" type="email" name="email" placeholder="email" required>
+                <br><br>
+                <h2 class="typegrad">Graduation</h2>
+                <select class="grad" name="grad" id="grad">
+                    <option disabled="disabled" selected="selected">--Graduation--</option>
+                    <option>B.Tech</option>
+                    <option>B.E</option>
+                    <option>BSc</option>
+                    <option>MCA</option>
+                    <option>B.Ed</option>
+
+                </select>
+
+                <br><br>
+                <h2 class="yearL">Year of Passing</h2>
+                <select class="year" name="year" id="year">
+                    <option disabled="disabled" selected="selected">--Choose option--</option>
+                    <option>2021</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                </select>
+
+                <br><br>
+
+            <h2 class="question">Are you employeed </h2>
+            <input type="radio" name="option" value="yes" id="option-1">
+            <label style="background-color: whitesmoke;" for="option-1">Yes</label>
+            <input type="radio" name="option" value="no" id="option-2">
+            <label style="background-color: whitesmoke;" for="option-2">No</label>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+
+            </form>
+        </div>
+    </body>
+</html>

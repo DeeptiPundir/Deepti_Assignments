@@ -1,0 +1,31 @@
+<html>
+<head>
+
+</head>
+<body>
+
+    <input type="text" name="a" id="first" placeholder="Enter a number"/>
+    <button onclick="sum ()">Submit</button>
+    <div id="num"></div>
+
+
+    <script>
+
+        function sum()
+        {
+        var n;
+        n = parseInt(document.getElementById ("first").value);
+        if(n%2==0)
+        {
+        document.getElementById ("num").innerHTML="Entered number is even";
+        }
+        else
+        {
+        document.getElementById ("num").innerHTML="Entered number is odd";
+
+        }
+
+        }
+    </script>
+</body>
+</html>

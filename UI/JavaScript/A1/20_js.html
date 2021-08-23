@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        input,textarea:focus{
+            background-color: lightgray;
+	       
+        }
+        .form{
+            border: 4pm solid black;
+            background-color: sandybrown;
+            margin: 0 auto;
+            padding: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text" style="text-align: center;">Place Pizza Order</h1>
+    <Form class="form" id="newform">
+        <label for="namefield">Name:</label>
+        <input type="text" id="namefield" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="emailfield">Email:</label>
+        <input type="email" id="emailfield" placeholder="Enter your email" required>
+        <br><br>
+
+
+        <h3>Toppings:</h3>
+        <label for="t1">Extra cheese</label>
+        <input type="checkbox" id="t1" name="pt" value="Extra cheese">
+        <label for="t2">Pepproni</label>
+        <input type="checkbox" id="t2" name="pt" value="pepprioni">
+        <label for="t3">Olives</label>
+        <input type="checkbox" id="t3"  name="pt" value="Olives">
+        <label for="t4">Pepper</label>
+        <input type="checkbox" id="t4"  name="pt" value="Pepper">
+        <label for="t5">Bcon</label>
+        <input type="checkbox" id="t5"  name="pt" value="Bcon">
+        <label for="t6">Tomatoes</label>
+        <input type="checkbox" id="t6"  name="pt" value="Tomatoes"> 
+        <label for="t7">Mashrooms</label>
+        <input type="checkbox" id="t7"  name="pt" value="Mashrooms">
+        <br><br>
+
+
+        <h3>How do you want to get your pizza? <br></h3>
+        <label for="s1">Delivary</label>
+        <input type="radio" id="s1" name="transport" value="Delivary">
+        <label for="s2">Pick-up</label>
+        <input type="radio" id="s2" name="transport" value="Pickup">
+        <br><br>
+
+        
+        <h3>Tip?</h3>
+        <select name="tip" id="tip">
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+        </select>
+
+        <hr>
+
+        <h3>Address:</h3>
+        <textarea name="address" id="add" cols="40" rows="8" required></textarea>
+        <br><br>
+       
+        <input type="button" onclick="enableshowSummary()" value="submit">
+        <input type="button" onclick="myFunction()" value="Reset form">
+       <input id="button1" type="button" onclick="show()" value="show summary" disabled>
+         <br>
+         <br>
+         <h3>Name:</h3>
+         <div id="data"></div>
+
+         <h3>email:</h3>
+         <div id="d2">  </div>
+
+         <h3>Toppings:</h3>
+         <div id="d3"> </div>
+
+         <h3>Type of transport:</h3>
+         <div id="d4"></div>
+
+         <h3>tip(%):</h3>
+         <div id="d5"> </div>
+
+         <h3>Address:</h3>
+         <div id="d6">
+           
+         </div>
+         <h4>Total prize</h4>
+         <div id="d7">
+           
+        </div>
+        <script src="function.js"></script>
+        
+    </Form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script>
+        
+        myFunction()
+        {
+            document.getElementById("newform").reset();
+        }
+
+
+
+        function enableshowSummary()
+        {
+                document.getElementById("button1").disabled = false;
+        }
+
+        function show()
+        {
+                var name=document.getElementById("namefield");
+            
+                var email=document.getElementById("emailfield");
+            
+                var delivery = document.getElementById("s1");
+                var Pickup = document.getElementById("s2");
+            
+                var tip=document.getElementById("tip");
+                var add=document.getElementById("add");
+
+                document.getElementById("data").innerHTML = name.value;
+                document.getElementById("d2").innerHTML = email.value;
+
+
+                var markedCheckbox = document.getElementsByName('pt'); 
+
+                var c=0; 
+                for (var checkbox of markedCheckbox) {  
+                    if (checkbox.checked)  
+                    var txt=checkbox.value + ' ';  
+                    c++;
+                
+                    }  
+            document.getElementById("d3").innerHTML=txt;
+
+
+            var op="";
+                if(delivery.checked)
+                    {op=delivery.value;
+                    document.getElementById("d4").innerHTML=delivery.value;
+                }
+                else
+                {
+                    document.getElementById("d4").innerHTML=Pickup.value;
+                }
+
+                document.getElementById("d5").innerHTML=tip.value;
+                document.getElementById("d6").innerHTML=add.value;
+
+                var d=0;
+                if(op==="pickup") d=0;
+                else d=5;
+                var total=(10+(1.5*c)+d)*1+tip.value;
+                document.getElementById("d7").innerHTML=total;
+        }
+
+
+    </script>
+</body>
+</html>

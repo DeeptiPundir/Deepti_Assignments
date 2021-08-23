@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function compose(x)
+        {
+            return square_f1(double_f2(x));
+        }
+
+        function compose_(x)
+        {
+            return double_f2(square_f1(x));
+        }
+
+        function square_f1(x)
+        {
+            return x*x;
+        }
+        function double_f2(x)
+        {
+            return x*2;
+        }
+
+    </script>
+</body>
+</html>
